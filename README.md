@@ -1,6 +1,4 @@
 # simpleserver
-A very simle python web server
-For instructions: 
+server with a beer 
 
-See Ruslan's Blog
-https://ruslanspivak.com/lsbaws-part1/
+created by user2745
