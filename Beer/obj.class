@@ -1,0 +1,48 @@
+# Class named "obj" for bash Object
+
+# property
+obj_properties=()
+
+# properties IDs
+bottles=0   
+
+obj.sayHello(){
+    echo Hello
+}
+
+# create object methods
+obj.start(){
+    echo "Enter amount of bottles"
+    read num
+    return $num
+}
+
+obj.loop()
+{
+    # local scoping variables
+    scope=${obj_properties[$1]}
+    while [ "$scope" -gt 0 ]
+    do
+    echo "$scope bottles of beer on the wall... $scope bottles of beer"
+    scope=$[scope-1]
+    echo "take one down, pass it around...  $scope bottles of beer on the wall!"
+    done
+}
+
+obj.property(){
+    if [ "$2" == "=" ];
+    then
+        obj_properties[$1]=$3
+    else
+        echo ${obj_properties[$1]}
+    fi
+}
+
+obj.bottlesOfBeer(){
+    if [ "$1" == "=" ]
+    then
+        obj.property bottles = $2
+    else
+        obj.property bottles
+    fi
+}
