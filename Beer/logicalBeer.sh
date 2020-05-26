@@ -22,3 +22,6 @@ fi
 if $(( $num == $end )); then exit;
 # Syntax
 # var AND var MergeToForm
+
+
+# Note this needs a lot of work

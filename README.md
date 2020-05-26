@@ -1,4 +1,6 @@
 # simpleserver
 server with a beer
 
-One program written in 4 programming paradigms:
+
+Beer: One program written in 4 programming paradigms
+Server: Single page web server 
